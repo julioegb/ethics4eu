@@ -33,23 +33,23 @@ class PapersAttributeTest {
 
         repository.save(papersAttribute);
 
-//        TeacherPapers paper2 = TeacherPapers.builder()
-//                .p_id("ShahriariShahriari17")
-//                .title("{IEEE standard review — Ethically aligned design: A vision for prioritizing human well-being with artificial intelligence and autonomous systems}")
-//                .authors("Shahriari, Kyarash and Shahriari, Mana")
-//                .build();
-//
-//        PapersAttribute papersAttribute2 = PapersAttribute.builder()
-//                .fieldType("inproceedings")
-//                .booktitle("2017 IEEE Canada International Humanitarian Technology Conference (IHTC)")
-//                .pages("197--201")
-//                .year("2017")
-//                .publisher("IEEE")
-//                .isbn("1509062645")
-//                .ethics4EU("Computing: AI. Ethics: Autonomy. Industry: Military, Economics")
-//                .teacherPapers(paper2)
-//                .build();
-//
-//        repository.save(papersAttribute2);
+        TeacherPapers paper2 = TeacherPapers.builder()
+                .p_id("ShahriariShahriari17")
+                .title("{IEEE standard review — Ethically aligned design: A vision for prioritizing human well-being with artificial intelligence and autonomous systems}")
+                .authors("Shahriari, Kyarash and Shahriari, Mana")
+                .build();
+
+        PapersAttribute papersAttribute2 = PapersAttribute.builder()
+                .fieldType("inproceedings")
+                .booktitle("2017 IEEE Canada International Humanitarian Technology Conference (IHTC)")
+                .pages("197--201")
+                .year("2017")
+                .publisher("IEEE")
+                .isbn("1509062645")
+                .ethics4EU("Computing: AI. Ethics: Autonomy. Industry: Military, Economics")
+                .teacherPapers(paper2)
+                .build();
+
+        repository.save(papersAttribute2);
     }
 }

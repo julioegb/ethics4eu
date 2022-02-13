@@ -1,6 +1,5 @@
 package com.ethics4eu.ethics4eu.service;
 
-import com.ethics4eu.ethics4eu.documents.Documents;
 import com.ethics4eu.ethics4eu.entity.TeacherPapers;
 import com.ethics4eu.ethics4eu.repository.PapersAttributeRepository;
 import com.ethics4eu.ethics4eu.repository.TeacherPapersRepository;
@@ -21,7 +20,9 @@ public class TeacherPapersService {
     }
 
     public List<String> getTeacherPapers(){
+        System.out.println("Aqui estoy en el Service");
         List<TeacherPapers> teacherPapersList = teacherPapersRepository.findAll();
+        System.out.println("Esta cantidad recibo: " + teacherPapersList.size());
         List<String> papersList = new ArrayList<>();
         for(TeacherPapers paper:teacherPapersList){
             papersList.add(paper.paperBibTex());

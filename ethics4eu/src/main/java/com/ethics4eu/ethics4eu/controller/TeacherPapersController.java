@@ -24,6 +24,7 @@ public class TeacherPapersController{
 
     @GetMapping
     public List<String> getTeacherPapers(){
+        System.out.println("Pido la informacion");
         List<String> teacherPapersList = teacherPapersService.getTeacherPapers();
         return teacherPapersList;
     }

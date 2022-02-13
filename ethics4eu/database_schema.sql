@@ -2,8 +2,10 @@
 CREATE USER ethics4eu WITH PASSWORD '^a3!;6(=kSxt39xM';
 
 CREATE DATABASE ethics4eu;
+CREATE DATABASE schooldb;
 
 GRANT ALL PRIVILEGES ON DATABASE "ethics4eu" TO ethics4eu;
+GRANT ALL PRIVILEGES ON DATABASE "schooldb" TO jpa;
 -- Create relations
 
 

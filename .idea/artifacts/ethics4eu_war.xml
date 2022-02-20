@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ethics4eu:war">
+    <output-path>$PROJECT_DIR$/ethics4eu/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ethics4eu</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ethics4eu-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ethics4eu:war exploded" />
+    </root>
+  </artifact>
+</component>

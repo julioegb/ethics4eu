@@ -28,7 +28,6 @@ public class PapersAttribute {
      * Below all the parameters of Latex for a Bibtex register
      */
     private String address;
-    //private String author;
     private String booktitle;
     private String chapter;
     private String edition;
@@ -49,8 +48,6 @@ public class PapersAttribute {
     private String publisher;
     private String school;
     private String series;
-    //private String title;
-    private String type;
     private String volume;
     private String year;
     private String key;
@@ -66,7 +63,6 @@ public class PapersAttribute {
     private String collection;
     private String pmid;
     private String fieldType;
-
     private String ethics4EU;
 
     /**
@@ -81,4 +77,5 @@ public class PapersAttribute {
             referencedColumnName = "id"
     )
     private TeacherPapers teacherPapers;
+
 }

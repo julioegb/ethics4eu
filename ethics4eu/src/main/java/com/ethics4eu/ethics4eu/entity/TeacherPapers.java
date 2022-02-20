@@ -40,7 +40,7 @@ public class TeacherPapers {
 
     public String paperBibTex(){
         String bibTex = "";
-        bibTex = ("@" + papersAttribute.getFieldType() + "{" + getP_id() + ", ");
+        bibTex = "@" + papersAttribute.getFieldType() + "{" + getP_id() + ", ";
         if(papersAttribute.getAddress() != null) bibTex = bibTex + "address={" + papersAttribute.getAddress() + "}, ";
         if(getTitle() != null) bibTex = bibTex + "title={" + getTitle() + "}, ";
         if(getAuthors() != null) bibTex = bibTex + "author={" + getAuthors() + "}, ";
@@ -64,7 +64,6 @@ public class TeacherPapers {
         if(papersAttribute.getPublisher() != null) bibTex = bibTex + "publisher={" + papersAttribute.getPublisher() + "}, ";
         if(papersAttribute.getSchool() != null) bibTex = bibTex + "school={" + papersAttribute.getSchool() + "}, ";
         if(papersAttribute.getSeries() != null) bibTex = bibTex + "series={" + papersAttribute.getSeries() + "}, ";
-        if(papersAttribute.getType() != null) bibTex = bibTex + "type={" + papersAttribute.getType() + "}, ";
         if(papersAttribute.getVolume() != null) bibTex = bibTex + "volume={" + papersAttribute.getVolume() + "}, ";
         if(papersAttribute.getYear() != null) bibTex = bibTex + "year={" + papersAttribute.getYear() + "}, ";
         if(papersAttribute.getKey() != null) bibTex = bibTex + "key={" + papersAttribute.getKey() + "}, ";

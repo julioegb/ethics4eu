@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ethics4eu" version="4">
+  <OBJECT>
+    <ID name="ethics4eu" mc="Standard.Package" uid="8a93c371-1ee1-45a7-a8b3-80004cdc6b18"/>
+    <PID name="Ethics4EU" mc="Standard.Project" uid="ea0f8ef6-1b58-4604-8acb-262cc84447e2"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ethics4eu]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="TeacherPapers" mc="Standard.Class" uid="9f74fab8-70ab-4f28-ad77-cd583dc6ee2d"/>
+        <COMPID name="PapersAttribute" mc="Standard.Class" uid="1aa136c4-6b6c-443f-bbaa-1ef0f3d0158f"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="databaseTables" mc="Standard.ClassDiagram" uid="2e074d14-e2da-4d0e-80c8-ca80a5a6f2ad"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

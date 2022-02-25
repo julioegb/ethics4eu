@@ -1,4 +1,4 @@
-package com.ethics4eu.ethics4eu.service;
+package com.ethics4eu.ethics4eu.component;
 
 import com.ethics4eu.ethics4eu.entity.PapersAttribute;
 import com.ethics4eu.ethics4eu.entity.TeacherPapers;
@@ -8,7 +8,6 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -37,7 +36,6 @@ public class PapersAttributeService {
      */
     public boolean existTeacherPapersByName(String name){
         List<TeacherPapers> teacherPapersList = teacherPapersRepository.getTeacherPapersByName(name);
-        System.out.println("Lista de papers " + teacherPapersList);
         if(teacherPapersList.size() >= 1){
             return true;
         }

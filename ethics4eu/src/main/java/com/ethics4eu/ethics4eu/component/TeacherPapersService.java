@@ -1,4 +1,4 @@
-package com.ethics4eu.ethics4eu.service;
+package com.ethics4eu.ethics4eu.component;
 
 import com.ethics4eu.ethics4eu.entity.TeacherPapers;
 import com.ethics4eu.ethics4eu.repository.PapersAttributeRepository;

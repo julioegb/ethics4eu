@@ -1,7 +1,7 @@
 package com.ethics4eu.ethics4eu.controller;
 
-import com.ethics4eu.ethics4eu.service.PapersAttributeService;
-import com.ethics4eu.ethics4eu.service.TeacherPapersService;
+import com.ethics4eu.ethics4eu.component.PapersAttributeService;
+import com.ethics4eu.ethics4eu.component.TeacherPapersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

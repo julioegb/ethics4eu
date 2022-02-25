@@ -67,7 +67,7 @@ class PapersAttributeTest {
     }
 
     /**
-     * To Test if the reference is generated in the correct format
+     * To Test if the reference is generated in the correct BibTeX format
      */
     @Test
     public void bibTexGeneratorTest(){

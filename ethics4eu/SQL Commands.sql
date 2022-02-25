@@ -1,14 +1,14 @@
+-- Steps to create a new database and the user, and grand permission to the user to use this code
+
 -- Create the user
 CREATE USER ethics4eu WITH PASSWORD '^a3!;6(=kSxt39xM';
 
 CREATE DATABASE ethics4eu;
-CREATE DATABASE schooldb;
 
 GRANT ALL PRIVILEGES ON DATABASE "ethics4eu" TO ethics4eu;
-GRANT ALL PRIVILEGES ON DATABASE "schooldb" TO jpa;
--- Create relations
 
-
+-- The following are old SQL sentences that I used when the project has just one table
+-- Not to use with this project because now I use Data JPA
 
 -- Create Database
 CREATE DATABASE paper_db
@@ -48,7 +48,7 @@ INSERT INTO public.field_type(field_name) VALUES ('techreport');
 INSERT INTO public.field_type(field_name) VALUES ('unpublished');
 
 -- Create table of papers
-CREATE TABLE public.papers
+CREATE TABLE public.documents
 (
     id_paper serial,
     name character varying(254),
@@ -102,7 +102,7 @@ CREATE TABLE public.papers
     PRIMARY KEY (id_paper)
 );
 
-ALTER TABLE IF EXISTS public.papers
+ALTER TABLE IF EXISTS public.documents
     OWNER to postgres;
 
 -- Insert the Bibtex related with Ethics

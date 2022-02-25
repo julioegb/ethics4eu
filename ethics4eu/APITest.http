@@ -1,1 +1,32 @@
-GET http://localhost:8080/api/v1/bib
+### API Test
+
+### Return all the BiTeX references, no argument is needed
+GET http://localhost:8080/api/v1/docs
+
+### Return BiTeX references by name
+# @name Name of the reference
+GET http://localhost:8080/api/v1/docs/byname/Thomson85
+
+### Insert BibTex reference in the database
+POST http://localhost:8080/api/v1/docs
+Content-Type: application/json
+
+{
+  "type": "article",
+  "name": "Thomson85",
+  "title": "The trolley problem",
+  "author": "Thomson, Judith Jarvis",
+  "journal": "The Yale Law Journal",
+  "volume": "94",
+  "number": "6",
+  "pages": "1395--1415",
+  "year": "1985",
+  "publisher": "JSTOR",
+  "ethics4EU": "Computing: AI. Ethics: Autonomy. Industry: Transport, Robotics"
+}
+
+### Delete BibTeX reference
+DELETE http://localhost:8080/api/v1/docs/deletebyname/Thomson85
+
+
+

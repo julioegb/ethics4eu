@@ -3,6 +3,9 @@ package com.ethics4eu.ethics4eu;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Main Spring Boot Application
+ */
 @SpringBootApplication
 public class Ethics4euApplication {
 

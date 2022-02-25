@@ -8,12 +8,19 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Component class with the business logic for the API paths
+ */
 @Component
 public class PapersAttributeService {
 
+    /**
+     * Instances of the Repository Classes
+     */
     private final PapersAttributeRepository papersAttributeRepository;
     private final TeacherPapersRepository teacherPapersRepository;
 
@@ -25,8 +32,8 @@ public class PapersAttributeService {
 
     /**
      * Method to verify if a TeacherPaper exist
-     * @param name
-     * @return
+     * @param name of the reference
+     * @return true if the reference exist and false if don't
      */
     public boolean existTeacherPapersByName(String name){
         List<TeacherPapers> teacherPapersList = teacherPapersRepository.getTeacherPapersByName(name);
@@ -38,14 +45,53 @@ public class PapersAttributeService {
     }
 
     /**
-     * Method to insert a new Document in the table teacher_papers
-     * @param arguments
+     * Insert BibTeX reference
+     * @param arguments JSON with all the fields for a BibTeX reference, name and type are mandatories:
+     *                  Name: without spaces or special characters, name is unique
+     *                  type: correspond to the entry type field @article, @book, @inproceedings, etc.
+     *                  title
+     *                  address
+     *                  booktitle
+     *                  chapter
+     *                  edition
+     *                  editor
+     *                  howpublished
+     *                  institution
+     *                  journal
+     *                  month
+     *                  note
+     *                  number
+     *                  organization
+     *                  isbn
+     *                  issn
+     *                  url
+     *                  urn
+     *                  doi
+     *                  pages
+     *                  publisher
+     *                  school
+     *                  series
+     *                  volume
+     *                  year
+     *                  key
+     *                  file
+     *                  ee
+     *                  crossref
+     *                  bibsource
+     *                  issue_date
+     *                  abstract
+     *                  numpages
+     *                  editors
+     *                  location
+     *                  collection
+     *                  pmid
+     *                  ethics4EU (This is a specific field that indicates the section of the reference for the Ethics4EU document)
+     * @return insertion confirmation, error message if don't
      */
-    public void insertNewDocument(String arguments){
+    public String insertNewDocument(String arguments){
         JSONObject rawJson = new JSONObject(arguments);
         //Validate if Paper already exist
         if(!existTeacherPapersByName(rawJson.getString("name"))){
-
             // Creating the two instances
             TeacherPapers teacherPapers = TeacherPapers.builder()
                     .p_id(rawJson.getString("name"))
@@ -100,9 +146,14 @@ public class PapersAttributeService {
             }
             papersAttribute.setTeacherPapers(teacherPapers);
             papersAttributeRepository.save(papersAttribute);
+            List<TeacherPapers> teacherPapersList = teacherPapersRepository.getTeacherPapersByName(rawJson.getString("name"));
+            if(teacherPapersList.size() == 1){
+                return "Register " + rawJson.getString("name") + " was inserted.";
+            }else{
+                return "Error inserting register.";
+            }
         }else{
-            throw new IllegalStateException(
-                    "The document " + rawJson.getString("name") + " already exists.");
+            return "The document " + rawJson.getString("name") + " already exists.";
         }
     }
 }

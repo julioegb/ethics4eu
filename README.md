@@ -1,2 +1,2 @@
-# ethics4eu
-BibText Back End for Ethics4EU Development
+# Ethics4eu API
+API for Ethics4EU Project
